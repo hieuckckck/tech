@@ -1,0 +1,33 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int fibo(long long n){
+    if(n==1||n==0) return 1;
+    long long fn1=1;long long fn2=0;
+    for(int i=2;i<=92;i++){
+        long long fn=fn1+fn2;
+        if(n==fn){
+            return 1;
+        }
+        fn2=fn1;
+        fn1=fn;
+    }
+                return 0;
+}
+
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        long long n;
+        cin>>n;
+        if(fibo(n)==1) cout<<"YES";
+        else cout<<"NO";
+        cout<<endl;
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
