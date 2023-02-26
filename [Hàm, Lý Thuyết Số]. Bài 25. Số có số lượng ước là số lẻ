@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int kiemtra(long long n){
+    int can=sqrt(n);
+    if(1ll*can*can==n) return 1;
+    else return 0;
+}
+int main() {
+long long n;
+    scanf("%lld",&n);
+   if(kiemtra(n)==1) printf("YES");
+    else printf("NO");
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
