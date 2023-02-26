@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int tn(long long n){long long tong=0;long long k=n;
+    while(n>0){
+        tong=tong*10+n%10;
+        n=n/10;
+    }
+              if(tong==k) return 1;
+              return 0;
+}
+int main() {
+long long n;
+    scanf("%lld",&n);int h=n%10;
+    n=n/10;long long s=0;
+    while(n/10>0){
+        s=s*10+n%10;
+        n=n/10;
+    }
+    int t=n;
+    if(tn(s)==1&&(h==2*t||2*h==t)){
+        printf("YES");
+    }
+    else printf("NO");
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
