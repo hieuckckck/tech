@@ -1,0 +1,44 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int fibo(long long n){
+    if(n==1||n==0) return 1;
+    long long fn1=1;long long fn2=0;
+    for(int i=2;i<=92;i++){
+        long long fn=fn1+fn2;
+        if(n==fn){
+            return 1;
+        }
+        fn2=fn1;
+        fn1=fn;
+    }
+                return 0;
+}
+int tong(int n){int tong1=0;
+    while(n>0){
+        tong1=tong1+n%10;
+        n=n/10;
+    }
+                return tong1;
+}
+int snt(int n){
+    if(n<2) return 0;
+    else{
+    for(int i=2;i<=sqrt(n);i++){
+        if(n%i==0) return 0;
+    }
+    }
+    return 1;
+}
+int main() {
+    int n;
+    cin>>n;
+    for(int i=1;i<n;i++){
+        if(snt(i)==1&&fibo(tong(i))==1){cout<<i<<" ";}
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
