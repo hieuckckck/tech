@@ -1,0 +1,21 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int t;
+    cin>>t;
+    int mod=1000000007;long long res=1;
+    while(t--){
+        int p,e;
+        cin>>p>>e;
+        res=(res%mod)*((e+1)%mod)%mod;
+    }
+    cout<<res<<endl;
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
