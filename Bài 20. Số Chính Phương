@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int kiemtrascp(long long n){long long can=sqrt(n);
+    if(can*can==n) return 1;
+    return 0;
+}
+int main() {
+long long n;
+    scanf("%lld",&n);
+    if(kiemtrascp(n)==1) printf("YES");
+    else printf("NO");
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
