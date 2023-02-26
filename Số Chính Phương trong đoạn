@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+long long a,b;
+    scanf("%lld%lld",&a,&b);
+    if(a>b) return 0;
+    else{
+        for(long long i=ceil(sqrt(a));i<=(long long)sqrt(b);i++){
+           
+                printf("%lld ",i*i);
+            
+        }
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
